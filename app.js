@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var ejs = require('ejs');
-
+var youtube = require('youtube-mp3');
 
 var app = express();
 
@@ -29,7 +29,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-require('./routes/trans')(app)
+require('./routes/trans')(app,youtube);
+
+app.get('/',(req,res)=>{
+    res.render("index.html");
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
