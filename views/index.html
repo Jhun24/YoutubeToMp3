@@ -12,25 +12,32 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.js" type="text/javascript"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 </head>
 <body>
 
     <div class="conversion-box">
         <div class="conversion-title">Youtube Video to MP3</div>
-        <div class="conversion-input-box">
-            <div class="conversion-url-input">
-                <input type="text" class="video-url" placeholder="URL을 입력해주세요">
-            </div>
-            <div class="conversion-name-input">
-                <input type="text" class="video-name" placeholder="파일 이름을 설정해주세요">
-            </div>
-        </div>
-        <div class="conversion-video-show">
-            <iframe width="400px" height="500px" src=""></iframe>
-        </div>
-        <div class="conversion-button-box">
+        <div class="conversion-content">
+            <div class="conversion-input-box">
+                <div class="conversion-url-input">
+                    <input type="text" class="video-url" placeholder="URL을 입력해주세요">
+                </div>
+                <div class="conversion-name-input">
+                    <input type="text" class="video-name" placeholder="파일 이름을 설정해주세요">
+                </div>
 
+                <!--<div class="null-box"></div>-->
+                <div class="conversion-button-box">
+                    <div class="conversion-button">Download</div>
+                </div>
+            </div>
+            <div class="conversion-video-show">
+                <video tabindex="-1" class="video-stream html5-main-video" controlslist="nodownload" style="width: 640px; height: 360px; left: 0px; top: 0px;" src="blob:https://www.youtube.com/69b23ad5-4289-4f32-963a-4375a9772904"></video>
+            </div>
         </div>
     </div>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
